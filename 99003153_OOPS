@@ -1,0 +1,86 @@
+import re
+
+
+class First:
+    def __init__(self):
+        self.x = float(input("Enter first number:"))
+        self.y = float(input("Enter second number:"))
+        print(re.match("[a-z]+@[a-z]+\.[a-z]{1,3}", "nagateja@gmail.com"))
+
+
+class second(First):
+
+    def add(self):
+
+        z = self.x + self.y
+        print("Sum is:", z)
+
+
+class Third(First):
+    def sub(self):
+
+        z = self.x - self.y
+        print("sub is:", z)
+
+
+class fourth(First):
+    def mul(self):
+
+        self.z = self.x * self.y
+        print("mul is:", self.z)
+
+
+class five(First):
+    def div(self):
+
+        z = self.x / self.y
+        print("Division is:", round(z, 2))
+
+
+class Naga:
+    def __init__(self):
+        print(re.match("[a-z]+@[a-z]+\.[a-z]{1,3}", "nagateja@gmail.com"))
+        self.c = self.six()
+
+    class six:
+        def __init__(self):
+            self.a = complex(input("Enter comp number:"))
+            self.b = complex(input("Enter comp number:"))
+
+        def add_Complex(self):
+            z = self. a + self. b
+            print("addComplex is:", z)
+
+
+choice = 1
+while choice != 0:
+    print("0. Exit")
+    print("1. Add")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. addComplex")
+    choice = int(input("Enter choice: "))
+    if choice == 1:
+        obj = second()
+        obj.add()
+    elif choice == 2:
+        obj = Third()
+        obj.sub()
+    elif choice == 3:
+        obj = fourth()
+        obj.mul()
+    elif choice == 4:
+        obj = five()
+        obj.div()
+    elif choice == 5:
+        obj = Naga()
+        obj1 = obj.c
+        obj1.add_Complex()
+    elif choice == 0:
+        print("Exiting!")
+    else:
+        print("Invalid choice!!")
+
+
+print()
